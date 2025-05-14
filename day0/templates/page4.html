@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/page4" method="post">
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" value="{{frontend_name}}">
+        <label for="age">Age: </label>
+        <input type="number" id="age" name="age" value="{{frontend_age}}">
+        <button type="submit">Send</button>
+    </form>
+    {% for i in frontend_age %}
+        {{ i }}
+        <h1>Hello from {{frontend_name}}'s side</h1>
+    {% endfor %}
+</body>
+</html>
